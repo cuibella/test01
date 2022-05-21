@@ -21,8 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('page/01',view.test01),
     path('page/test02',view.test02),
-    # 访问主页 http://127.0.0.1:8000/v/index
-    path('v/index',view.index_view),
-    path('user',include('user.urls')),
+    # http://127.0.0.1:8000/index
+    path('index',view.index_view),
+    path('user/',include('user.urls')),
 
 ]

@@ -20,3 +20,15 @@ def register_post(request):
     phone = request.POST.get('phone')
     print('1')
     return HttpResponse(f'注册成功')
+
+def first_page(request):
+    dict = {}
+    if request.method == 'GET':
+        return render(request,'first_page.html')
+    elif request.method == 'POST':
+        name = request.POST.get('name')
+        dict['name'] = name
+        return render(request, 'first_page.html',dict)
+
+
+

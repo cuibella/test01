@@ -6,7 +6,11 @@
 </head>
 <body>
     <h3>崔的个人主页</h3>
-    <a href="{% url 'register_page' %}">注册用户账号</a>
+    <form name='input' action="{% url 'first_page' %}" method="post">
+        name:<input type="text" name="name"><br>
+        password:<input type="text" name="password"><br><br>
+        <input type="submit" value="提交">
+    </form>
 
 </body>
 </html>

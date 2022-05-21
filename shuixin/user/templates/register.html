@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册用户账号</title>
+</head>
+<body>
+
+    <form name="input" action="{% url 'register_page' %}" method="post">
+        注册来源: <input type="text" name="sources"><br>
+        邀请编号: <input type="text" name="patter"><br>
+        注册手机号: <input type="text" name="phone"><br>
+        <p><b>注意：</b>注册来源=1 邀请编号填写谁信邀请码，=2 邀请码编号填写代理商编号</p>
+        <p>{{result}}</p>
+        <div><input type="submit" value="注册"></div>
+    </form>
+
+
+
+</body>
+</html>
